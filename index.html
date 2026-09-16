@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FURSAD QARAN</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #123456;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #123456;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #123456, #176b52);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 28px;
+      background: #d4af37;
+      color: #123456;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 25px;
+      color: #123456;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 25px;
+      border-radius: 12px;
+      background: #f4f8f6;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #176b52;
+    }
+
+    ul {
+      max-width: 700px;
+      margin: 20px auto;
+      padding-left: 25px;
+    }
+
+    .future {
+      background: #f4f8f6;
+    }
+
+    footer {
+      background: #123456;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 5px;
+        display: inline-block;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">FURSAD QARAN</div>
+
+    <nav>
+      <a href="#home">Hoyga</a>
+      <a href="#about">Fikradda</a>
+      <a href="#opportunities">Fursadaha</a>
+      <a href="#results">Natiijooyinka</a>
+      <a href="#funding">Maalgelinta</a>
+      <a href="#future">Mustaqbalka</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>FURSAD QARAN</h1>
+    <p>
+      Barnaamijka Qaranka ee Maalgelinta Hal-abuurka Dhalinyarada Soomaaliyeed
+    </p>
+    <p>Fikrad Maanta, Fursad Berri.</p>
+    <a href="#about" class="button">Wax badan ka ogow</a>
+  </section>
+
+  <section id="about">
+    <h2>Fikradda Fursad Qaran</h2>
+    <p class="intro">
+      Fursad Qaran waa barnaamij loogu talagalay in lagu taageero
+      hal-abuurka iyo fikradaha dhalinyarada Soomaaliyeed, iyadoo la
+      siinayo fursado maalgelin, horumar iyo iskaashi.
+    </p>
+  </section>
+
+  <section id="opportunities">
+    <h2>Fursadaha</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>💡 Hal-abuur</h3>
+        <p>Taageeridda fikradaha cusub iyo hal-abuurka dhalinyarada.</p>
+      </div>
+
+      <div class="card">
+        <h3>💰 Maalgelin</h3>
+        <p>Helitaanka fursado maalgelin iyo taageero dhaqaale.</p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Iskaashi</h3>
+        <p>Isku xirka dhalinyarada, hay'adaha iyo shirkadaha.</p>
+      </div>
+
+      <div class="card">
+        <h3>📈 Horumar</h3>
+        <p>Kobcinta fikradaha si ay u noqdaan mashaariic waara.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="results">
+    <h2>Natiijooyinka la Filayo</h2>
+
+    <ul>
+      <li>Kordhinta fursadaha dhalinyarada Soomaaliyeed.</li>
+      <li>Taageeridda hal-abuurka iyo ganacsiyada cusub.</li>
+      <li>Abuurista shaqooyin iyo ilo dhaqaale.</li>
+      <li>Kobcinta iskaashiga bulshada iyo hay'adaha.</li>
+      <li>Horumarinta fikradaha dhalinyarada.</li>
+    </ul>
+  </section>
+
+  <section id="funding">
+    <h2>Maalgelinta & Hirgelinta</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Dowladda</h3>
+        <p>Taageero iyo maalgelin rasmi ah.</p>
+      </div>
+
+      <div class="card">
+        <h3>Shirkadaha</h3>
+        <p>Iskaashi iyo maalgelin ka timaadda ganacsiyada gaarka loo leeyahay.</p>
+      </div>
+
+      <div class="card">
+        <h3>Hay'adaha</h3>
+        <p>Taageero horumarineed iyo farsamo.</p>
+      </div>
+
+      <div class="card">
+        <h3>Diaspora</h3>
+        <p>Ka qaybqaadashada qurbo-joogta Soomaaliyeed.</p>
+      </div>
+    </div>
+
+    <p class="intro" style="margin-top:30px;">
+      Hirgelintu waxay ku bilaabaneysaa dhisidda website-ka, helitaanka
+      iskaashi iyo maalgelin, kadibna ballaarinta adeegyada Fursad Qaran.
+    </p>
+  </section>
+
+  <section id="future" class="future">
+    <h2>Mustaqbalka</h2>
+
+    <p class="intro">
+      Fursad Qaran waxaa la qorsheynayaa in mustaqbalka lagu ballaariyo
+      adeegyada, fursadaha iyo iskaashiga, si uu u noqdo mashruuc waara
+      oo bulshada iyo dalka faa'iido u leh.
+    </p>
+  </section>
+
+  <footer>
+    <p><strong>FURSAD QARAN</strong></p>
+    <p>Fikrad Maanta, Fursad Berri.</p>
+    <p>Waxaa fikradda keenay, qoray oo diyaariyey: Ahlam HSN Mohamed</p>
+  </footer>
+
+</body>
+</html>
