@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FURSAD QARAN</title>
+  <title>Fursad Qaran</title>
 
   <style>
     * {
@@ -21,9 +21,9 @@
     }
 
     header {
-      background: #123456;
+      background: #075ca8;
       color: white;
-      padding: 20px 8%;
+      padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -37,102 +37,161 @@
       font-weight: bold;
     }
 
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 15px;
+      font-weight: bold;
+      font-size: 14px;
     }
 
     nav a:hover {
-      color: #d4af37;
+      text-decoration: underline;
     }
 
     .hero {
-      background: linear-gradient(135deg, #123456, #176b52);
-      color: white;
-      text-align: center;
+      min-height: 500px;
       padding: 100px 20px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #087fc1, #18b889);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
+      font-size: 52px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 21px;
       max-width: 750px;
-      margin: auto;
+      font-size: 19px;
+      margin-bottom: 30px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 13px 28px;
-      background: #d4af37;
+      background: #f4c400;
       color: #123456;
+      padding: 14px 28px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: #ffd633;
     }
 
     section {
-      padding: 70px 8%;
+      padding: 75px 8%;
+      text-align: center;
     }
 
-    section h2 {
-      text-align: center;
+    section:nth-child(even) {
+      background: #f5f9fc;
+    }
+
+    h2 {
       font-size: 32px;
-      margin-bottom: 25px;
-      color: #123456;
+      margin-bottom: 20px;
+      color: #075ca8;
     }
 
     .intro {
-      text-align: center;
       max-width: 850px;
-      margin: auto;
+      margin: 0 auto 35px;
+      color: #555;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 35px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .card {
-      padding: 25px;
+      background: white;
+      padding: 28px;
       border-radius: 12px;
-      background: #f4f8f6;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
 
     .card h3 {
+      color: #075ca8;
       margin-bottom: 12px;
-      color: #176b52;
     }
 
-    ul {
-      max-width: 700px;
-      margin: 20px auto;
-      padding-left: 25px;
+    .number {
+      font-size: 35px;
+      font-weight: bold;
+      color: #18a879;
+      margin-bottom: 10px;
+    }
+
+    .steps {
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .step {
+      background: white;
+      margin: 15px 0;
+      padding: 22px;
+      border-left: 5px solid #18a879;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .step strong {
+      color: #075ca8;
+    }
+
+    .funding {
+      background: linear-gradient(135deg, #075ca8, #18a879);
+      color: white;
+    }
+
+    .funding h2 {
+      color: white;
+    }
+
+    .funding .intro {
+      color: white;
     }
 
     .future {
-      background: #f4f8f6;
+      background: #f5f9fc;
     }
 
     footer {
-      background: #123456;
+      background: #075ca8;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 35px 20px;
     }
 
     footer strong {
-      color: #d4af37;
+      font-size: 20px;
+    }
+
+    footer p {
+      margin: 7px 0;
     }
 
     @media (max-width: 700px) {
@@ -141,13 +200,20 @@
         gap: 15px;
       }
 
-      nav a {
-        margin: 5px;
-        display: inline-block;
+      nav {
+        gap: 12px;
       }
 
       .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 6%;
       }
     }
   </style>
@@ -155,120 +221,254 @@
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo">FURSAD QARAN</div>
 
     <nav>
       <a href="#home">Hoyga</a>
-      <a href="#about">Fikradda</a>
-      <a href="#opportunities">Fursadaha</a>
-      <a href="#results">Natiijooyinka</a>
-      <a href="#funding">Maalgelinta</a>
-      <a href="#future">Mustaqbalka</a>
+      <a href="#fikrad">Fikradda</a>
+      <a href="#fursadaha">Fursadaha</a>
+      <a href="#natiijooyinka">Natiijooyinka</a>
+      <a href="#maalgelinta">Maalgelinta</a>
+      <a href="#mustaqbalka">Mustaqbalka</a>
     </nav>
   </header>
 
-  <section class="hero" id="home">
+  <!-- HOME -->
+  <section id="home" class="hero">
     <h1>FURSAD QARAN</h1>
+
     <p>
-      Barnaamijka Qaranka ee Maalgelinta Hal-abuurka Dhalinyarada Soomaaliyeed
+      Barnaamijka Qaranka ee Maalgelinta Hal-abuurka
+      Dhalinyarada Soomaaliyeed
     </p>
-    <p>Fikrad Maanta, Fursad Berri.</p>
-    <a href="#about" class="button">Wax badan ka ogow</a>
+
+    <p>
+      Fikrad Maanta, Fursad Berri.
+    </p>
+
+    <a href="#fikrad" class="button">Wax badan ka ogow</a>
   </section>
 
-  <section id="about">
+  <!-- FIKRADDA -->
+  <section id="fikrad">
     <h2>Fikradda Fursad Qaran</h2>
+
     <p class="intro">
       Fursad Qaran waa barnaamij loogu talagalay in lagu taageero
-      hal-abuurka iyo fikradaha dhalinyarada Soomaaliyeed, iyadoo la
-      siinayo fursado maalgelin, horumar iyo iskaashi.
+      hal-abuurka iyo fikradaha dhalinyarada Soomaaliyeed, iyadoo
+      la siinayo fursado ay fikradahooda ugu beddeli karaan
+      mashaariic iyo ganacsiyo shaqeeya.
     </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="number">01</div>
+        <h3>Fikrad</h3>
+        <p>
+          Dhalinyaradu waxay soo gudbin karaan fikrado cusub
+          oo xal u noqon kara baahiyaha bulshada.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">02</div>
+        <h3>Qiimeyn</h3>
+        <p>
+          Fikradaha waxaa lagu qiimeyn karaa qorshe, hal-abuur
+          iyo saameynta ay bulshada ku yeelan karaan.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="number">03</div>
+        <h3>Taageero</h3>
+        <p>
+          Fikradaha la xusho waxay heli karaan tababar,
+          hagitaan iyo fursado maalgelin.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section id="opportunities">
+  <!-- FURSADAHA -->
+  <section id="fursadaha">
     <h2>Fursadaha</h2>
+
+    <p class="intro">
+      Fursad Qaran waxay diiradda saareysaa in dhalinyarada
+      Soomaaliyeed loo abuuro waddo ay ku horumariyaan
+      kartidooda iyo fikradahooda.
+    </p>
 
     <div class="cards">
       <div class="card">
         <h3>💡 Hal-abuur</h3>
-        <p>Taageeridda fikradaha cusub iyo hal-abuurka dhalinyarada.</p>
+        <p>
+          Taageeridda fikradaha cusub iyo xalalka hal-abuurka leh.
+        </p>
       </div>
 
       <div class="card">
-        <h3>💰 Maalgelin</h3>
-        <p>Helitaanka fursado maalgelin iyo taageero dhaqaale.</p>
+        <h3>📚 Tababar</h3>
+        <p>
+          Horumarinta aqoonta, xirfadaha iyo fahamka ganacsiga.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💼 Shaqo</h3>
+        <p>
+          Abuuridda fursado shaqo iyo ganacsi oo dhalinyarada ah.
+        </p>
       </div>
 
       <div class="card">
         <h3>🤝 Iskaashi</h3>
-        <p>Isku xirka dhalinyarada, hay'adaha iyo shirkadaha.</p>
-      </div>
-
-      <div class="card">
-        <h3>📈 Horumar</h3>
-        <p>Kobcinta fikradaha si ay u noqdaan mashaariic waara.</p>
+        <p>
+          Isku xirka dhalinyarada, ganacsatada iyo maalgeliyayaasha.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="results">
-    <h2>Natiijooyinka la Filayo</h2>
+  <!-- NATIJOYINKA -->
+  <section id="natiijooyinka">
+    <h2>Natiijooyinka La Filayo</h2>
 
-    <ul>
-      <li>Kordhinta fursadaha dhalinyarada Soomaaliyeed.</li>
-      <li>Taageeridda hal-abuurka iyo ganacsiyada cusub.</li>
-      <li>Abuurista shaqooyin iyo ilo dhaqaale.</li>
-      <li>Kobcinta iskaashiga bulshada iyo hay'adaha.</li>
-      <li>Horumarinta fikradaha dhalinyarada.</li>
-    </ul>
-  </section>
-
-  <section id="funding">
-    <h2>Maalgelinta & Hirgelinta</h2>
+    <p class="intro">
+      Barnaamijku wuxuu hiigsanayaa inuu dhalinyarada ka caawiyo
+      inay fikradahooda u beddelaan mashaariic waara oo bulshada
+      iyo dhaqaalaha wax ku kordhiya.
+    </p>
 
     <div class="cards">
       <div class="card">
-        <h3>Dowladda</h3>
-        <p>Taageero iyo maalgelin rasmi ah.</p>
+        <div class="number">1</div>
+        <h3>Fikrado Cusub</h3>
+        <p>
+          In la helo lana horumariyo fikrado cusub oo dhalinyaro.
+        </p>
       </div>
 
       <div class="card">
-        <h3>Shirkadaha</h3>
-        <p>Iskaashi iyo maalgelin ka timaadda ganacsiyada gaarka loo leeyahay.</p>
+        <div class="number">2</div>
+        <h3>Ganacsiyo</h3>
+        <p>
+          In fikradaha wanaagsan loo beddelo ganacsiyo shaqeeya.
+        </p>
       </div>
 
       <div class="card">
-        <h3>Hay'adaha</h3>
-        <p>Taageero horumarineed iyo farsamo.</p>
+        <div class="number">3</div>
+        <h3>Shaqooyin</h3>
+        <p>
+          In la kordhiyo fursadaha shaqo ee dhalinyarada.
+        </p>
       </div>
 
       <div class="card">
-        <h3>Diaspora</h3>
-        <p>Ka qaybqaadashada qurbo-joogta Soomaaliyeed.</p>
+        <div class="number">4</div>
+        <h3>Saameyn Bulsho</h3>
+        <p>
+          In mashaariicdu xal u helaan baahiyaha bulshada.
+        </p>
       </div>
     </div>
-
-    <p class="intro" style="margin-top:30px;">
-      Hirgelintu waxay ku bilaabaneysaa dhisidda website-ka, helitaanka
-      iskaashi iyo maalgelin, kadibna ballaarinta adeegyada Fursad Qaran.
-    </p>
   </section>
 
-  <section id="future" class="future">
+  <!-- MAALGELINTA -->
+  <section id="maalgelinta" class="funding">
+    <h2>Maalgelinta</h2>
+
+    <p class="intro">
+      Fursad Qaran waxaa loo qorsheynayaa in lagu taageero
+      dhalinyarada leh fikrado ganacsi iyo mashaariic la horumarin
+      karo, iyadoo la raadinayo iskaashi iyo maalgelin waarta.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <strong>1. Soo gudbi fikradda</strong>
+        <p>
+          Qofka wuxuu soo bandhigayaa fikradiisa iyo qorshaha
+          uu doonayo inuu ku hirgeliyo.
+        </p>
+      </div>
+
+      <div class="step">
+        <strong>2. Qiimeyn</strong>
+        <p>
+          Fikradda waxaa lagu qiimeynayaa baahida, suuragalnimada
+          iyo saameynta ay yeelan karto.
+        </p>
+      </div>
+
+      <div class="step">
+        <strong>3. Horumarin</strong>
+        <p>
+          Fikradaha la xusho waxaa lagu caawin karaa tababar,
+          hagitaan iyo diyaarinta qorshe ganacsi.
+        </p>
+      </div>
+
+      <div class="step">
+        <strong>4. Maalgelin iyo iskaashi</strong>
+        <p>
+          Mashaariicda diyaar u ah hirgelinta waxaa loo raadin karaa
+          maalgelin iyo iskaashi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSTAQBALKA -->
+  <section id="mustaqbalka" class="future">
     <h2>Mustaqbalka</h2>
 
     <p class="intro">
-      Fursad Qaran waxaa la qorsheynayaa in mustaqbalka lagu ballaariyo
-      adeegyada, fursadaha iyo iskaashiga, si uu u noqdo mashruuc waara
-      oo bulshada iyo dalka faa'iido u leh.
+      Fursad Qaran waxaa loo qorsheynayaa in mustaqbalka lagu
+      ballaariyo adeegyada, fursadaha iyo iskaashiga, si uu u noqdo
+      mashruuc waara oo bulshada iyo dalka faa'iido u leh.
     </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🌱 Koboc</h3>
+        <p>
+          In barnaamijku si tartiib ah u kobco oo uu gaaro dhalinyaro badan.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🚀 Mashruucyo</h3>
+        <p>
+          In fikradaha wanaagsan loo beddelo mashaariic la hirgeliyey.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Iskaashi</h3>
+        <p>
+          In lala shaqeeyo hay'ado, ganacsato iyo maalgeliyeyaal.
+        </p>
+      </div>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p><strong>FURSAD QARAN</strong></p>
+    <strong>FURSAD QARAN</strong>
+
     <p>Fikrad Maanta, Fursad Berri.</p>
-    <p>Waxaa fikradda keenay, qoray oo diyaariyey: Ahlam HSN Mohamed</p>
+
+    <p>
+      Waxaa fikradda keenay, qoray oo diyaariyay:
+      <strong>Ahlam HSN Mohamed</strong>
+    </p>
+
+    <p>© 2026 Fursad Qaran</p>
   </footer>
 
 </body>
