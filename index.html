@@ -170,15 +170,19 @@
     .funding h2 {
       color: white;
     }
-
+form {
+  max-width: 700px;
+  margin: 30px auto 0;
+  text-align: left;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
     .funding .intro {
       color: white;
-    }
 
-    .future {
-      background: #f5f9fc;
-    }
-
+ }
     footer {
       background: #075ca8;
       color: white;
@@ -188,12 +192,9 @@
 
     footer strong {
       font-size: 20px;
-    }
+    
 
-    footer p {
-      margin: 7px 0;
-    }
-
+   }
     @media (max-width: 700px) {
       header {
         flex-direction: column;
@@ -452,6 +453,51 @@
     </div>
   </section>
 
+  <!-- APPLICATION -->
+  <section id="application">
+  <h2>Soo Gudbi Fikraddaada</h2>
+
+<p class="intro">
+  Haddii aad leedahay fikrad aad aaminsan tahay inay wax ka tari karto
+  bulshada Soomaaliyeed, halkan ayaad ku soo gudbin kartaa.
+</p>
+
+<form>
+
+  <label for="name">Magacaaga</label>
+  <input type="text" id="name" name="name" placeholder="Geli magacaaga" required>
+
+  <label for="email">Email-kaaga</label>
+  <input type="email" id="email" name="email" placeholder="Geli email-kaaga" required>
+
+  <label for="phone">Lambarka telefoonka</label>
+  <input type="tel" id="phone" name="phone" placeholder="Geli lambarkaaga telefoonka">
+
+  <label for="location">Meesha aad ku nooshahay</label>
+  <input type="text" id="location" name="location" placeholder="Tusaale: Muqdisho, Soomaaliya">
+
+  <label for="idea-title">Magaca fikraddaada</label>
+  <input type="text" id="idea-title" name="idea-title" placeholder="Geli magaca fikraddaada" required>
+
+  <label for="problem">Dhibaatada fikraddaadu xallinayso</label>
+  <textarea id="problem" name="problem" rows="5" placeholder="Sharax dhibaatada aad rabto inaad xalliso" required></textarea>
+
+  <label for="solution">Sidee ayay fikraddaadu u xallinaysaa dhibaatada?</label>
+  <textarea id="solution" name="solution" rows="5" placeholder="Sharax sida fikraddaadu u shaqaynayso" required></textarea>
+
+  <label for="impact">Yaa ka faa'iideysanaya?</label>
+  <textarea id="impact" name="impact" rows="4" placeholder="Sharax dadka ama bulshada ay caawinayso" required></textarea>
+
+  <label for="support">Taageerada aad u baahan tahay</label>
+  <textarea id="support" name="support" rows="4" placeholder="Tusaale: maalgelin, tababar, qalab, hagitaan"></textarea>
+
+  <label for="education">Waxbarashadaada ama xirfaddaada (ikhtiyaari)</label>
+  <input type="text" id="education" name="education" placeholder="Haddii aad rabto, halkan ku qor">
+
+  <button type="submit" class="button">Soo Gudbi Fikradda</button>
+
+</form>
+  </section>
   <!-- FOOTER -->
   <footer>
     <strong>FURSAD QARAN</strong>
