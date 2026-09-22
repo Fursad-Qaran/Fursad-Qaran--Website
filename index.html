@@ -453,6 +453,121 @@ form {
     </div>
   </section>
 
+    <!-- REGISTRATION -->
+  <section id="registration">
+    <h2>Diiwaangelinta</h2>
+
+    <p class="intro">
+      Si aad uga qayb qaadato Fursad Qaran, fadlan marka hore
+      buuxi xogtaada aasaasiga ah.
+    </p>
+
+    <form>
+
+      <label for="reg-name">Magaca oo buuxa</label>
+      <input
+        type="text"
+        id="reg-name"
+        name="registration-name"
+        placeholder="Geli magacaaga oo buuxa"
+        required
+      >
+
+      <label for="reg-email">Email-kaaga</label>
+      <input
+        type="email"
+        id="reg-email"
+        name="registration-email"
+        placeholder="Geli email-kaaga"
+        required
+      >
+
+      <label for="reg-phone">Lambarka telefoonka</label>
+      <input
+        type="tel"
+        id="reg-phone"
+        name="registration-phone"
+        placeholder="Geli lambarkaaga telefoonka"
+        required
+      >
+
+      <label for="reg-location">
+        Dalka iyo meesha aad ku nooshahay
+      </label>
+      <input
+        type="text"
+        id="reg-location"
+        name="registration-location"
+        placeholder="Tusaale: Muqdisho, Soomaaliya"
+        required
+      >
+
+      <label for="id-type">Nooca aqoonsiga</label>
+      <select id="id-type" name="id-type" required>
+        <option value="">Dooro nooca aqoonsiga</option>
+        <option value="passport">Passport</option>
+        <option value="national-id">National ID</option>
+      </select>
+
+      <label for="id-upload">
+        Sawirka Passport-ka ama National ID-ga
+      </label>
+      <input
+        type="file"
+        id="id-upload"
+        name="id-upload"
+        accept="image/*,.pdf"
+        required
+      >
+
+      <label for="self-photo">
+        Sawirkaaga (Self Photo)
+      </label>
+      <input
+        type="file"
+        id="self-photo"
+        name="self-photo"
+        accept="image/*"
+        required
+      >
+
+      <label for="cv">
+        CV / Resume (ikhtiyaari)
+      </label>
+      <input
+        type="file"
+        id="cv"
+        name="cv"
+        accept=".pdf,.doc,.docx"
+      >
+
+      <label for="reg-education">
+        Waxbarashadaada (ikhtiyaari)
+      </label>
+      <input
+        type="text"
+        id="reg-education"
+        name="registration-education"
+        placeholder="Tusaale: High School, College..."
+      >
+
+      <label for="skills">
+        Xirfadahaaga (ikhtiyaari)
+      </label>
+      <textarea
+        id="skills"
+        name="skills"
+        rows="4"
+        placeholder="Qor xirfadaha aad leedahay"
+      ></textarea>
+
+      <button type="submit" class="button">
+        Diiwaangeli
+      </button>
+
+    </form>
+  </section>
+
   <!-- APPLICATION -->
   <section id="application">
   <h2>Soo Gudbi Fikraddaada</h2>
