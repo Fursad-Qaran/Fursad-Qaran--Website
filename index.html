@@ -640,6 +640,31 @@ const supabaseClient = createClient(
   SUPABASE_URL,
   SUPABASE_PUBLISHABLE_KEY
 );
+document.getElementById("application-form").addEventListener("submit", async function(event){
+event. preventDefault();
+const { error } = await supabaseClient
+.from("ideas")
+.insert({
+
+full_name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+phone: document.getElementById("phone").value,
+location: document.getElementById("location").value,
+idea_title: document.getElementById("idea-title").value,
+problem: document.getElementById("problem").value,
+solution: document.getElementById("solution").value,
+beneficiaries: document.getElementById("impact").value,
+support_needed: document.getElementById("support").value,
+education_or_skills: document.getElementById("education").value,
+});
+if (error) {
+alert("Fikradda lama dirin . Fadlan mar kale isku day.");
+console.error(error);
+return;
+}
+alert("Fikraddaada si guul leh aya loo gudbiyay!");
+this.reset();
+});
 </script>
 </body>
 </html>
