@@ -658,7 +658,7 @@ support_needed: document.getElementById("support").value,
 education_or_skills: document.getElementById("education").value,
 });
 if (error) {
-alert("Fikradda lama dirin . Fadlan mar kale isku day.");
+alert("ERROR: " + error.message);
 console.error(error);
 return;
 }
