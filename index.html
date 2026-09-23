@@ -629,5 +629,17 @@ form {
   </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://nfhufbipbfqjesttubot.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_........";
+
+const { createClient } = supabase;
+
+const supabaseClient = createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+</script>
 </body>
 </html>
