@@ -476,7 +476,7 @@ required
 <label for="reg-email">Email-Kaaga</label>
 <input
 type="email"
-id="reg-"email"
+id="reg-email"
 name="email"
 placeholder="Geli email-kaaga"
 required
@@ -691,6 +691,78 @@ console.error(error);
 return;
 }
 alert("Fikraddaada si guul leh aya loo gudbiyay!");
+this.reset();
+});
+document .getElementById("registration-form").addEventListener("submit", async function(event) {
+event.preventDefault();
+const form = event.target;
+const fullName = form.querySelector('[name="full_name"]').value;
+const email = form .querySelector('[name="email"]').value;
+const phone = form .querySelector('[name="phone"]').value;
+const location = form .querySelector('[name="location"]').value;
+const age = form .querySelector('[name="age"]').value;
+const idType = form .querySelector('[name="id_type"]').value;
+const idUpload = form.querySelector('[name="id_upload"]').files[0];
+const selfPhoto = form.querySelector('[name="self_photo"]').files[0];
+const cv = form.querySelector('[name="cv"]').files[0];
+const education = form.querySelector('[name="education"]').value;
+const skills = form.querySelector('[name="skills"]').value;
+const ageConfirmed = form .querySelector('[name="age_confirmation"]').checked;
+const drugConfirmed = form .querySelector('[name="drug_confirmation"]').checked;
+if (!ageConfirmed || !drugConfirmed) {
+alert("Fadlan xaqiiji da'da 18+ iyo inaad tahy qof aan isticmaalin daroogo ama maandooriye.");
+return;
+}
+const idFileName =  `${Date.now()}_${idUpload.name}`;
+const selfPhotoName = `${Date.now()}_${selfPhoto.name}`;
+const cvFileName = cv ? `${Date.now()}_${cv.name}`: null;
+const { error: idUploadError } = await supabaseClient
+.storage
+.from("registration-documents")
+.upload(`ids/${idFileName}`,idUpload);
+if (idUploadError) {
+alert("ID upload Failed: " + idUploadError.message);
+return;
+}
+const { error: selfPhotoUploadError } = await supabaseClient
+.storage
+.from("registration-documents")
+.upload(`self-photos/${selfPhotoName}`, selfPhoto);
+if ( selfPhotoUploadError) {
+alert("Self-photo failed: " + selfPhotoUploadError.message);
+return;
+}
+const cvUploadPath = cv ? `cvs/${cvFileName}`: null;
+if (cv) {
+const { error: cvUploadError } = await supabaseClient
+.storage
+.from("registration-documents")
+.upload(cvUploadPath,cv);
+if ( cvUploadError) {
+alert("CV upload failed: " + cvUploadError.message);
+return;
+}
+}
+const { error: registrationError } = await supabaseClient
+.from("registrations")
+.insert({
+full_name: fullName,
+email: email,
+phone: phone,
+location: location,
+age: Number(age),
+id_file_path:  `ids/${idFileName}`,
+id_type: idType,
+self_photo_path: `self-photos/${selfPhotoName}`,
+cv_path: cvUploadPath,
+education: education,
+skills: skills,
+});
+if (registrationError) {
+alert("Registration failed: " + registrationError.message);
+return;
+}
+alert("Diiwangelinta si guul leh ayaa loo guudbiyay!");
 this.reset();
 });
 </script>
